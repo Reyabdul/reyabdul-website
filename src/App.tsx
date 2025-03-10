@@ -1,24 +1,36 @@
+import React, {useState} from "react";
+//COMPONENTS
+import { IntroPage } from "./components/general/Intro/IntroPage.tsx";
 //TANSTACK ROUTER
-import { RouterProvider, createRouter } from '@tanstack/react-router'
-import { routeTree } from "./routeTree.gen.ts" //Import the generated route tree
+// import { RouterProvider, createRouter } from '@tanstack/react-router'
+// import { routeTree } from "./routeTree.gen.ts" //Import the generated route tree
 //STYLES
-import './App.css'
+import './global.css'
 
 //Create a router instance
-const router = createRouter({ routeTree });
+// const router = createRouter({ routeTree });
 
 // Register the router instance for type safety
-declare module '@tanstack/react-router' {
-  interface Register {
-    router: typeof router
-  }
-}
+// declare module '@tanstack/react-router' {
+//   interface Register {
+//     router: typeof router
+//   }
+// }
 
 function App() {
 
+  const [showIntro, setShowIntro] = useState(true);
+
+
   return (
     <>
-      <RouterProvider router={router} />
+      <IntroPage showIntro={showIntro} setShowIntro={setShowIntro} />
+      {/* <RouterProvider router={router} /> */}
+      {!showIntro && (
+        <>
+          <h1>Home Page</h1>
+        </>
+      )}
     </>
   )
 }

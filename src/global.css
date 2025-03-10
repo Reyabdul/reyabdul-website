@@ -1,0 +1,127 @@
+/* 
+=====SITE STYLE SHEET========
+  1. Variable CSS Styles
+  2. Typography Styles
+  3. Global Styles
+  4. Page Styles
+  5. Media Queries Styles
+  
+ *** Note: Components and Routes Pages are styled within their own folder***
+
+  /*
+========================================
+1. Variable CSS Styles
+======================================== */
+:root {
+  /* COLOURS */
+  --primary-background: #FCFCFE;
+  --secondary-background: #1E201F;
+
+  /*FONTS*/
+  --primary-text: #1E201F;
+  --secondary-text: #FCFCFE;
+
+  /* --intern-font: "Inter", sans-serif;
+  --gloock-font: "Gloock", serif; */
+
+  --normal-text: 1.5rem;
+}
+
+/*
+======================================== 
+2. Typography Styles
+======================================== */
+/* @import url("https://fonts.googleapis.com/css2?family=Gloock&family=Inter:wght@300&display=swap"); */
+
+a {
+  /* text-decoration: none; */
+  color: var(--primary-text);
+}
+
+p {
+  /* font-family: "Inter", sans-serif; */
+  color: var(--primary-text);
+  font-size: var(--normal-text);
+  line-height: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-text);
+  /* font-family: var(--gloock-font); */
+}
+
+/*
+========================================
+3. Global Styles
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* overflow-y: scroll;
+  overflow-x: scroll; */
+  background-color: var(--primary-background);
+  color: var(--primary-text);
+
+}
+
+main {
+  max-height: 100vh;
+}
+
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*
+========================================
+4. Layout
+======================================== */
+
+.section {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  /* max-width: 90%; */
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  /* gap: 1.5rem; */
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*
+========================================
+5. Media Queries Styles
+======================================== */
+
+/*=========== BREAKPOINTS =============*/
+/*Large  Screens and Devices (e.g.:DESKTOPS)*/
+@media screen and (max-width: 1200px) {
+
+}
